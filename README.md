@@ -19,7 +19,7 @@
 npm install --save plover-benchmark
 ```
 
-1. 默认情况下不会记录性能日志，可以通过以下配置开启
+1\. 默认情况下不会记录性能日志，可以通过以下配置开启 
 
 ```
 {
@@ -27,9 +27,9 @@ npm install --save plover-benchmark
     enable: true
   }
 }
-```
+``` 
 
-2. 启动时添加环境变量 `DEBUG_BENCHMARK=true` 也可以记录日志
+2\. 启动时添加环境变量 `DEBUG_BENCHMARK=true` 也可以记录日志
 
 
 ```
