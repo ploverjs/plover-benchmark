@@ -2,6 +2,7 @@
 
 
 const pathUtil = require('path');
+const co = require('co');
 const plover = require('plover');
 const request = require('supertest');
 
@@ -9,6 +10,10 @@ const request = require('supertest');
 const plugin = require('../lib/plugin');
 
 const sleep = require('./fixtures/app/lib/sleep');
+
+
+/* eslint no-process-env: 0 */
+
 
 
 describe('plugin', function() {
@@ -40,9 +45,27 @@ describe('plugin', function() {
 
 
   it('ignore for simple request', function() {
-    const app = create({ applicationRoot: root });
+    const app = create({
+      applicationRoot: root,
+      benchmark: { enable: true }
+    });
+    app.addMiddleware(function* () {
+      this.body = 'simple';
+    });
     return request(app.callback())
-      .get('/404').expect(404);
+      .get('/').expect(200);
+  });
+
+
+  it('enable with env DEBUG_BENCHMARK', function() {
+    process.env.DEBUG_BENCHMARK = '1';
+    const app = create({ applicationRoot: root });
+    app.addMiddleware(CacheService);
+    return co(function* () {
+      yield request(app.callback())
+        .get('/').expect(200);
+      delete process.env.DEBUG_BENCHMARK;
+    });
   });
 });
 

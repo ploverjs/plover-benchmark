@@ -15,10 +15,11 @@
     "lib"
   ],
   "dependencies": {
-    "output-formatter": "~1.0.1",
+    "output-formatter": "~1.0.2",
     "plover-logger": "~1.4.1"
   },
   "devDependencies": {
+    "co": "~4.6.0",
     "conventional-changelog-cli": "~1.2.0",
     "eslint": "~2.12.0",
     "eslint-config-bce": "~1.2.0",
