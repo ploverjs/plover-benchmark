@@ -19,7 +19,7 @@ npm install --save plover-benchmark
 
 1\. 默认情况下不会记录性能日志，可以通过以下配置开启 
 
-```
+```js
 {
   benchmark: {
     enable: true
@@ -49,6 +49,25 @@ module.exports = function() {
     done();   // mark end
   };
 }
+```
+
+开启`benchmark`后在控制台会得到类似以下输出:
+
+```
+                      plover-benchmark
+------------------------------------------------------------
+                       name                        cost(ms)
+------------------------------------------------------------
+request                                                196
+cache-service                                           61
+index:view.action                                       32
+get view data                                            9
+index:view.render                                       14
+ index:item.action                                      11
+unknow request                                      unknow
+ index:item.render                                       0
+ layouts:view.action                                    84
+ layouts:view.render                                     0
 ```
 
 [npm-image]: https://img.shields.io/npm/v/plover-benchmark.svg?style=flat-square
