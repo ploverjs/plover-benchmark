@@ -9,9 +9,7 @@
 提供性能监控工具方法，记录模块渲染时间
 
 
-## 使用
-
-### 接入
+## 接入
 
 在应用中引入此插件
 
@@ -36,8 +34,7 @@ npm install --save plover-benchmark
 $ DEBUG_BENCHMARK=true npm run start
 ```
 
-
-### 使用
+## 使用
 
 可以调用`benchmark` service提供的方法来记录调用时间
 
