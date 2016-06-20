@@ -48,9 +48,9 @@ describe('plugin', function() {
 
 
 function* CacheService(next) {
-  this.benchmark.mark('cache-service');
+  const done = this.benchmark.mark('cache-service');
   yield sleep(60);
-  this.benchmark.mark('cache-service');
+  done();
   yield* next;
 }
 

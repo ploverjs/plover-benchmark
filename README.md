@@ -47,9 +47,9 @@ in middleware
 module.exports = function() {
   return function* () {
     ...
-    this.benchmark.mark('request-some-data');   // begin record
+    const done this.benchmark.mark('request-some-data');   // mark start
     yield requestSomeData();
-    this.benchmark.mark('request-some-data');   // end record
+    done();   // mark end
   };
 }
 ```
