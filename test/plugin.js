@@ -5,6 +5,7 @@ const pathUtil = require('path');
 const co = require('co');
 const plover = require('plover');
 const request = require('supertest');
+const Engine = require('plover-arttemplate');
 
 
 const plugin = require('../lib/plugin');
@@ -81,6 +82,7 @@ function* CacheService(next) {
 function create(settings) {
   const app = plover(settings);
   plugin(app);
-  app.addEngine('art', require('plover-arttemplate'));
+  const engine = new Engine();
+  app.addEngine('art', engine);
   return app;
 }

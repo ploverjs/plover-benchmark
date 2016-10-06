@@ -72,8 +72,8 @@ unknow request                                      unknow
 
 [npm-image]: https://img.shields.io/npm/v/plover-benchmark.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/plover-benchmark
-[travis-image]: https://img.shields.io/travis/plover-modules/plover-benchmark/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/plover-modules/plover-benchmark
-[coveralls-image]: https://img.shields.io/codecov/c/github/plover-modules/plover-benchmark.svg?style=flat-square
-[coveralls-url]: https://codecov.io/github/plover-modules/plover-benchmark?branch=master
+[travis-image]: https://img.shields.io/travis/ploverjs/plover-benchmark/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/ploverjs/plover-benchmark
+[coveralls-image]: https://img.shields.io/codecov/c/github/ploverjs/plover-benchmark.svg?style=flat-square
+[coveralls-url]: https://codecov.io/github/ploverjs/plover-benchmark?branch=master
 
