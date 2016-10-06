@@ -1,6 +1,6 @@
 {
   "name": "plover-benchmark",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "提供性能监控工具，以及记录模块渲染时间",
   "main": "lib/index",
   "scripts": {
